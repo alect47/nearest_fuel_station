@@ -2,8 +2,8 @@ class Direction
   attr_reader :distance, :travel_time, :html_instructions
 
   def initialize(direction_hash)
-    @distance = member_hash[:distance]
-    @travel_time = member_hash[:travel_time]
-    @html_instructions = member_hash[:html_instructions]
+    @distance = direction_hash[:distance]
+    @travel_time = direction_hash[:travel_time]
+    @html_instructions = direction_hash[:html_instructions]
   end
 end
