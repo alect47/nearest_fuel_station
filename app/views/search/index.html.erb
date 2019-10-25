@@ -11,5 +11,5 @@
 <section class="directions">
   <p>Travel time: <%= facade.search_direction.travel_time %>
   <p>Distance: <%= facade.search_direction.distance %>
-  <p><%= facade.search_direction.html_instructions %>
+  <p><%= strip_tags(facade.search_direction.html_instructions) %>
 </section>

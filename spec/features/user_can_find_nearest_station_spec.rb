@@ -19,7 +19,7 @@ describe "user can find nearest fuel station" do
     within '.directions' do
       expect(page).to have_content("Travel time: 1 min")
       expect(page).to have_content("Distance: 0.1 mi")
-      expect(page).to have_content("<b>southeast</b> on <b>17th St</b> toward <b>Larimer St</b>")
+      expect(page).to have_content("Head southeast on 17th St toward Larimer St")
     end
   end
 end
