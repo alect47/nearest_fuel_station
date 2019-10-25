@@ -5,6 +5,7 @@ describe 'nrel service' do
     service = NrelService.new("1331 17th St LL100, Denver, CO 80202")
 
     info = service.closest_station_search
+    binding.pry
     expect(info).to be_a(Hash)
     expect(info).to have_key(:access_days_time)
     expect(info).to have_key(:fuel_type_code)

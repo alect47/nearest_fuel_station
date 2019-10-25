@@ -9,7 +9,7 @@ class GoogleMapsService
   def directions_search
     json_response = conn.get("directions/json", {origin: @origin, destination: @destination})
     location_data = JSON.parse(json_response.body, symbolize_names: true)
-o = location_data[:routes][0][:legs][0][:steps][0]
+    direction_info = location_data[:routes][0][:legs][0][:steps][0]
   end
 
   def conn
