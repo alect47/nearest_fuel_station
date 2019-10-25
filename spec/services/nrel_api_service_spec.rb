@@ -6,7 +6,15 @@ describe 'nrel service' do
 
     info = service.closest_station_search
 
-    expect(info).to be_a(Array)
-    expect(info.last).to have_key(:name)
+    expect(info).to be_a(Hash)
+    expect(info).to have_key(:access_days_time)
+    expect(info).to have_key(:fuel_type_code)
+    expect(info).to have_key(:station_name)
+    expect(info).to have_key(:city)
+    expect(info).to have_key(:state)
+    expect(info).to have_key(:street_address)
+    expect(info).to have_key(:zip)
+    expect(info).to have_key(:country)
+    expect(info).to have_key(:distance)
   end
 end
