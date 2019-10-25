@@ -4,7 +4,6 @@ class NrelService
     @address = address
   end
 
-  # change location to address variable
   def closest_station_search
     json_response = conn.get("nearest.json", {location: @address, fuel_type: "ELEC", limit: 1})
     location_data = JSON.parse(json_response.body, symbolize_names: true)

@@ -3,7 +3,6 @@ class SearchFacade
 
   def initialize(origin)
     @origin = origin
-    # @destination = destination
   end
 
   def search_station

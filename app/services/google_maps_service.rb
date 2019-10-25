@@ -5,7 +5,6 @@ class GoogleMapsService
     @destination = destination
   end
 
-  # change location to address variable
   def directions_search
     json_response = conn.get("directions/json", {origin: @origin, destination: @destination})
     location_data = JSON.parse(json_response.body, symbolize_names: true)
