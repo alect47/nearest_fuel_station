@@ -10,23 +10,16 @@ describe "user can find nearest fuel station" do
     expect(current_path).to eq '/search'
 
     within '.station' do
-      expect(page).to have_content("Name: abd")
-      expect(page).to have_content("Address: abd")
-      expect(page).to have_content("Fuel Type: abd")
-      expect(page).to have_content("Distance: abd")
-      expect(page).to have_content("Access Times: abd")
+      expect(page).to have_content("Name: Seventeenth Street Plaza")
+      expect(page).to have_content("Address: 1225 17th St. Denver CO 80202")
+      expect(page).to have_content("Fuel Type: ELEC")
+      expect(page).to have_content("Distance: 0.0934")
+      expect(page).to have_content("Access Times: MO: Not Specified; TU: Not Specified; WE: Not Specified; TH: Not Specified; FR: Not Specified; SA: Not Specified; SU: Not Specified")
     end
-
-    expect(page).to have_content("Travel time/distance: 0.1 miles")
-    expect(page).to have_content("Head southeast on 17th St toward Larimer St etc")
+    within '.directions' do
+      expect(page).to have_content("Travel time: 1 min")
+      expect(page).to have_content("Distance: 0.1 mi")
+      expect(page).to have_content("<b>southeast</b> on <b>17th St</b> toward <b>Larimer St</b>")
+    end
   end
 end
-
-
-# Then I should see the closest electric fuel station to me.
-
-# I should also see:
-# - the distance of the nearest station
-# - the travel time from Turing to that fuel station (should be 0.1 miles)
-# - The HTML direction instructions to get to that fuel station
-#   "Head <b>southeast</b> on <b>17th St</b> toward <b>Larimer St</b>"

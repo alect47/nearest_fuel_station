@@ -1,7 +1,15 @@
+
+
 <section class="station">
-  <p>Name: <%= @station.name %></p>
-  <p>Address: <%= @station.address %></p>
-  <p>Fuel Type: <%= @station.fuel_type %></p>
-  <p>Distance: <%= @station.distance %></p>
-  <p>Access Times: <%= @station.access_times %></p>
+  <p>Name: <%= facade.search_station.name %>
+  <p>Address: <%= facade.search_station.address %>
+  <p>Fuel Type: <%= facade.search_station.fuel_type %>
+  <p>Distance: <%= facade.search_station.distance %>
+  <p>Access Times: <%= facade.search_station.access_times %>
+</section>
+
+<section class="directions">
+  <p>Travel time: <%= facade.search_direction.travel_time %>
+  <p>Distance: <%= facade.search_direction.distance %>
+  <p><%= facade.search_direction.html_instructions %>
 </section>

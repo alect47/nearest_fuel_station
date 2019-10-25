@@ -1,9 +1,9 @@
 class SearchFacade
   attr_reader :origin, :destination
 
-  def initialize(origin, destination)
+  def initialize(origin)
     @origin = origin
-    @destination = destination
+    # @destination = destination
   end
 
   def search_station
@@ -37,6 +37,7 @@ class SearchFacade
   end
 
   def google_maps_api_service
-    GoogleMapsService.new(@origin, @destination)
+    @destination = search_station
+    GoogleMapsService.new(@origin, @destination.address)
   end
 end
